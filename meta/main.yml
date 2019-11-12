@@ -1,5 +1,6 @@
 ---
 galaxy_info:
+  role_name: example
   author: Clemens Kaserer
   description: example role to demonstrate role testing
   license: GPLv2
