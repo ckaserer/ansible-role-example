@@ -1,0 +1,48 @@
+---
+python:
+  - "3.4"
+  - "3.5"
+  - "3.6"
+  - "3.7"
+  - "3.8"
+
+services: docker
+
+install:
+  - pip install tox
+  
+env:
+  global:
+    - ROLE_NAME: hello-world
+  matrix:
+    # - TOX_DISTRO: "centoslatest" TOX_ANSIBLE: "latest"
+    # - TOX_DISTRO: "centos8" TOX_ANSIBLE: "latest"
+    - TOX_DISTRO: "centos7" TOX_ANSIBLE: "latest"
+    
+    # - TOX_DISTRO: "fedoralatest" TOX_ANSIBLE: "latest"
+    # - TOX_DISTRO: "fedora30" TOX_ANSIBLE: "latest"
+    # - TOX_DISTRO: "fedora29" TOX_ANSIBLE: "latest"
+    # - TOX_DISTRO: "fedora28" TOX_ANSIBLE: "latest"
+    
+    # - TOX_DISTRO: "ubuntulatest" TOX_ANSIBLE: "latest"
+    # - TOX_DISTRO: "ubuntu2004" TOX_ANSIBLE: "latest"
+    # - TOX_DISTRO: "ubuntu1904" TOX_ANSIBLE: "latest"
+    # - TOX_DISTRO: "ubuntu1804" TOX_ANSIBLE: "latest"
+    # - TOX_DISTRO: "ubuntu1604" TOX_ANSIBLE: "latest"
+    
+    # - TOX_DISTRO: "debianlatest" TOX_ANSIBLE: "latest"
+    # - TOX_DISTRO: "debianstable" TOX_ANSIBLE: "latest"
+    # - TOX_DISTRO: "debian10" TOX_ANSIBLE: "latest"
+    # - TOX_DISTRO: "debian9" TOX_ANSIBLE: "latest"
+    # - TOX_DISTRO: "debian8" TOX_ANSIBLE: "latest"
+
+    # - TOX_DISTRO: "alpinelatest" TOX_ANSIBLE: "latest"
+    # - TOX_DISTRO: "alpine310" TOX_ANSIBLE: "latest"
+    # - TOX_DISTRO: "alpine39" TOX_ANSIBLE: "latest"
+    # - TOX_DISTRO: "alpine38" TOX_ANSIBLE: "latest"
+
+#    - TOX_DISTRO: "clearlinux:latest"
+
+script:
+  # Run tests.
+  - tox -e py-${TOX_ANSIBLE}-${TOX_DISTRO}

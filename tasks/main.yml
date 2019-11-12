@@ -1,0 +1,8 @@
+---
+- name: create /tmp/hello-world.txt
+  copy:
+    dest: "/tmp/hello-world.txt"
+    content: "{{ example_message }}"
+  tags:
+  - example
+  - example.hello-world
