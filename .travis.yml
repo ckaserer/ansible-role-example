@@ -30,7 +30,8 @@ notifications:
     - "by %{author} %{result} in %{duration}"
     on_success: never
     on_failure: always
-
+  webhooks: https://galaxy.ansible.com/api/v1/notifications/
+  
 install:
 - pip install tox-travis
 
