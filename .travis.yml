@@ -24,16 +24,15 @@ notifications:
     on_failure: never
   slack:
     rooms:
-      secure: >
-        n2Ftslm3wxqAToHF4BQgyqtO3+SJvkvUG1jnXVQ4inyY6blPK46Aach2kaUncaaOogS4xwRGKJAoZxo
-        7CSG7hhBuSDFCJzjMntxLTj4bOXY7YQAd6Gh/RsotvkwAbvomRRpRPZSA/LuzlRRa8bAkjjKO919BaV
-        /odvCJbqsXRo/g8OGcwE75bjJBN3Qc2U+7DkMSn1BqWxVr3mAHsJc3W9IJreEuksnLPho7sJrp8iIb/
-        4jPuezPaSe7ubPqKLZOc+W5IBD5ApJ34w7cfTjWf+cWRdZJhGcG29SGiD8e36VX7CxJ4thecOrUKhJv
-        SzniewAlju7Hk+pZQHvYZVIeWrgNhNlcXU1GAhR8dk2eddHATvOODbNyOwwrNzKg75N+Jf4uij9ilBd
-        5ng8sZBwZDCHr4HzI5nGcjEQSInoYgOOc8RXxoqk98x8UC1gPNcS1+If+4vuoGCTm1CnsI0N2F2D3zU
-        5nHA05qmLMtbhTQRVvccSmexx6bJ5CbmHjCwIgcPP/om5U7jxFPb6ZxrSpNHCzn/oep2l43qDfOXNWD
-        /VnT4xB9wScMlVwGsyGzhZw0p6T4s3sOFBVKn0iESKQaFpBzSY8A01Yq0eoYBG7s1DMm63f+FbSCdq6
-        zHrvaOHKBqNsl2UB3ViEAQQk7gxWmalYlmzjk25sA2VFsY4Gzzo=
+      secure: "n2Ftslm3wxqAToHF4BQgyqtO3+SJvkvUG1jnXVQ4inyY6blPK46Aach2kaUncaaOogS4xwRG\
+        KJAoZxo7CSG7hhBuSDFCJzjMntxLTj4bOXY7YQAd6Gh/RsotvkwAbvomRRpRPZSA/LuzlRRa8bAkjjK\
+        O919BaV/odvCJbqsXRo/g8OGcwE75bjJBN3Qc2U+7DkMSn1BqWxVr3mAHsJc3W9IJreEuksnLPho7sJ\
+        rp8iIb/4jPuezPaSe7ubPqKLZOc+W5IBD5ApJ34w7cfTjWf+cWRdZJhGcG29SGiD8e36VX7CxJ4thec\
+        OrUKhJvSzniewAlju7Hk+pZQHvYZVIeWrgNhNlcXU1GAhR8dk2eddHATvOODbNyOwwrNzKg75N+Jf4u\
+        ij9ilBd5ng8sZBwZDCHr4HzI5nGcjEQSInoYgOOc8RXxoqk98x8UC1gPNcS1+If+4vuoGCTm1CnsI0N\
+        2F2D3zU5nHA05qmLMtbhTQRVvccSmexx6bJ5CbmHjCwIgcPP/om5U7jxFPb6ZxrSpNHCzn/oep2l43q\
+        DfOXNWD/VnT4xB9wScMlVwGsyGzhZw0p6T4s3sOFBVKn0iESKQaFpBzSY8A01Yq0eoYBG7s1DMm63f+\
+        FbSCdq6zHrvaOHKBqNsl2UB3ViEAQQk7gxWmalYlmzjk25sA2VFsY4Gzzo="
     template:
       - "%{commit_subject}"
       - "build <%{build_url}|#%{build_number}> (<%{compare_url}|%{commit}>) @%{branch}"
@@ -47,52 +46,52 @@ install:
 
 env:
   jobs:
-    - TOX_DISTRO="alpinelatest"     TOX_ANSIBLE="latest"
-    - TOX_DISTRO="alpine310"        TOX_ANSIBLE="latest"
-    - TOX_DISTRO="alpine39"         TOX_ANSIBLE="latest"
-    - TOX_DISTRO="centoslatest"     TOX_ANSIBLE="latest"
-    - TOX_DISTRO="centos8"          TOX_ANSIBLE="latest"
-    - TOX_DISTRO="centos7"          TOX_ANSIBLE="latest"
-    - TOX_DISTRO="clearlinuxlatest" TOX_ANSIBLE="latest"
-    - TOX_DISTRO="debianlatest"     TOX_ANSIBLE="latest"
-    - TOX_DISTRO="debianstable"     TOX_ANSIBLE="latest"
-    - TOX_DISTRO="debian10"         TOX_ANSIBLE="latest"
-    - TOX_DISTRO="debian9"          TOX_ANSIBLE="latest"
-    - TOX_DISTRO="debian8"          TOX_ANSIBLE="latest"
-    - TOX_DISTRO="fedoralatest"     TOX_ANSIBLE="latest"
-    - TOX_DISTRO="fedora30"         TOX_ANSIBLE="latest"
-    - TOX_DISTRO="fedora29"         TOX_ANSIBLE="latest"
-    - TOX_DISTRO="fedora28"         TOX_ANSIBLE="latest"
-    - TOX_DISTRO="opensuselatest"   TOX_ANSIBLE="latest"
-    - TOX_DISTRO="opensuse15"       TOX_ANSIBLE="latest"
-    - TOX_DISTRO="ubuntulatest"     TOX_ANSIBLE="latest"
-    - TOX_DISTRO="ubuntu2004"       TOX_ANSIBLE="latest"
-    - TOX_DISTRO="ubuntu1904"       TOX_ANSIBLE="latest"
-    - TOX_DISTRO="ubuntu1804"       TOX_ANSIBLE="latest"
-    - TOX_DISTRO="ubuntu1604"       TOX_ANSIBLE="latest"
-    - TOX_DISTRO="alpinelatest"     TOX_ANSIBLE="{29,28}"
-    - TOX_DISTRO="alpine310"        TOX_ANSIBLE="{29,28}"
-    - TOX_DISTRO="alpine39"         TOX_ANSIBLE="{29,28}"
-    - TOX_DISTRO="centoslatest"     TOX_ANSIBLE="{29,28}"
-    - TOX_DISTRO="centos8"          TOX_ANSIBLE="{29,28}"
-    - TOX_DISTRO="centos7"          TOX_ANSIBLE="{29,28}"
-    - TOX_DISTRO="clearlinuxlatest" TOX_ANSIBLE="{29,28}"
-    - TOX_DISTRO="debianlatest"     TOX_ANSIBLE="{29,28}"
-    - TOX_DISTRO="debianstable"     TOX_ANSIBLE="{29,28}"
-    - TOX_DISTRO="debian10"         TOX_ANSIBLE="{29,28}"
-    - TOX_DISTRO="debian9"          TOX_ANSIBLE="{29,28}"
-    - TOX_DISTRO="debian8"          TOX_ANSIBLE="{29,28}"
-    - TOX_DISTRO="fedoralatest"     TOX_ANSIBLE="{29,28}"
-    - TOX_DISTRO="fedora30"         TOX_ANSIBLE="{29,28}"
-    - TOX_DISTRO="fedora29"         TOX_ANSIBLE="{29,28}"
-    - TOX_DISTRO="fedora28"         TOX_ANSIBLE="{29,28}"
-    - TOX_DISTRO="opensuselatest"   TOX_ANSIBLE="{29,28}"
-    - TOX_DISTRO="opensuse15"       TOX_ANSIBLE="{29,28}"
-    - TOX_DISTRO="ubuntulatest"     TOX_ANSIBLE="{29,28}"
-    - TOX_DISTRO="ubuntu2004"       TOX_ANSIBLE="{29,28}"
-    - TOX_DISTRO="ubuntu1904"       TOX_ANSIBLE="{29,28}"
-    - TOX_DISTRO="ubuntu1804"       TOX_ANSIBLE="{29,28}"
-    - TOX_DISTRO="ubuntu1604"       TOX_ANSIBLE="{29,28}"
+    - TOX_DISTRO=alpinelatest      TOX_ANSIBLE=latest
+    - TOX_DISTRO=alpine310         TOX_ANSIBLE=latest
+    - TOX_DISTRO=alpine39          TOX_ANSIBLE=latest
+    - TOX_DISTRO=centoslatest      TOX_ANSIBLE=latest
+    - TOX_DISTRO=centos8           TOX_ANSIBLE=latest
+    - TOX_DISTRO=centos7           TOX_ANSIBLE=latest
+    - TOX_DISTRO=clearlinuxlatest  TOX_ANSIBLE=latest
+    - TOX_DISTRO=debianlatest      TOX_ANSIBLE=latest
+    - TOX_DISTRO=debianstable      TOX_ANSIBLE=latest
+    - TOX_DISTRO=debian10          TOX_ANSIBLE=latest
+    - TOX_DISTRO=debian9           TOX_ANSIBLE=latest
+    - TOX_DISTRO=debian8           TOX_ANSIBLE=latest
+    - TOX_DISTRO=fedoralatest      TOX_ANSIBLE=latest
+    - TOX_DISTRO=fedora30          TOX_ANSIBLE=latest
+    - TOX_DISTRO=fedora29          TOX_ANSIBLE=latest
+    - TOX_DISTRO=fedora28          TOX_ANSIBLE=latest
+    - TOX_DISTRO=opensuselatest    TOX_ANSIBLE=latest
+    - TOX_DISTRO=opensuse15        TOX_ANSIBLE=latest
+    - TOX_DISTRO=ubuntulatest      TOX_ANSIBLE=latest
+    - TOX_DISTRO=ubuntu2004        TOX_ANSIBLE=latest
+    - TOX_DISTRO=ubuntu1904        TOX_ANSIBLE=latest
+    - TOX_DISTRO=ubuntu1804        TOX_ANSIBLE=latest
+    - TOX_DISTRO=ubuntu1604        TOX_ANSIBLE=latest
+    - TOX_DISTRO=alpinelatest      TOX_ANSIBLE={29,28}
+    - TOX_DISTRO=alpine310         TOX_ANSIBLE={29,28}
+    - TOX_DISTRO=alpine39          TOX_ANSIBLE={29,28}
+    - TOX_DISTRO=centoslatest      TOX_ANSIBLE={29,28}
+    - TOX_DISTRO=centos8           TOX_ANSIBLE={29,28}
+    - TOX_DISTRO=centos7           TOX_ANSIBLE={29,28}
+    - TOX_DISTRO=clearlinuxlatest  TOX_ANSIBLE={29,28}
+    - TOX_DISTRO=debianlatest      TOX_ANSIBLE={29,28}
+    - TOX_DISTRO=debianstable      TOX_ANSIBLE={29,28}
+    - TOX_DISTRO=debian10          TOX_ANSIBLE={29,28}
+    - TOX_DISTRO=debian9           TOX_ANSIBLE={29,28}
+    - TOX_DISTRO=debian8           TOX_ANSIBLE={29,28}
+    - TOX_DISTRO=fedoralatest      TOX_ANSIBLE={29,28}
+    - TOX_DISTRO=fedora30          TOX_ANSIBLE={29,28}
+    - TOX_DISTRO=fedora29          TOX_ANSIBLE={29,28}
+    - TOX_DISTRO=fedora28          TOX_ANSIBLE={29,28}
+    - TOX_DISTRO=opensuselatest    TOX_ANSIBLE={29,28}
+    - TOX_DISTRO=opensuse15        TOX_ANSIBLE={29,28}
+    - TOX_DISTRO=ubuntulatest      TOX_ANSIBLE={29,28}
+    - TOX_DISTRO=ubuntu2004        TOX_ANSIBLE={29,28}
+    - TOX_DISTRO=ubuntu1904        TOX_ANSIBLE={29,28}
+    - TOX_DISTRO=ubuntu1804        TOX_ANSIBLE={29,28}
+    - TOX_DISTRO=ubuntu1604        TOX_ANSIBLE={29,28}
 
 script:
   - tox -e $(echo py${TRAVIS_PYTHON_VERSION} | tr -d .)-ansible${TOX_ANSIBLE}-${TOX_DISTRO}
