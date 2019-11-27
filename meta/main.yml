@@ -8,32 +8,38 @@ galaxy_info:
   min_ansible_version: 2.1
 
   platforms:
-  - name: Debian
-    versions:
-    - all
-    - 10
-    - 9
-    - 8
-  - name: Alpine
-    version:
-    - all
-    - 3.10
-    - 3.9
-    - 3.8
-  - name: Clearlinux
-    version:
-    - all
-  - name: EL
-    versions:
-    - all
-    - 8
-    - 7
-  - name: Fedora
-    versions:
-    - all
-    - 30
-    - 29
-    - 28
+    - name: Alpine
+      version:
+        - latest
+        - 3.10
+        - 3.9
+        - 3.8
+    - name: Clearlinux
+      version:
+        - latest
+    - name: Debian
+      versions:
+        - latest
+        - stable
+        - 10
+        - 9
+        - 8
+    - name: EL
+      versions:
+        - latest
+        - 8
+        - 7
+    - name: Fedora
+      versions:
+        - latest
+        - 31
+        # - 30
+        - 29
+        - 28
+    - name: Suse
+      versions:
+        - latest
+        - 15
 
   galaxy_tags: []
   # List tags for your role here, one per line. A tag is a keyword that describes

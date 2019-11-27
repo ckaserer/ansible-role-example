@@ -59,6 +59,7 @@ env:
     - TOX_DISTRO=debian9           TOX_ANSIBLE=latest
     - TOX_DISTRO=debian8           TOX_ANSIBLE=latest
     - TOX_DISTRO=fedoralatest      TOX_ANSIBLE=latest
+    - TOX_DISTRO=fedora31          TOX_ANSIBLE=latest
     - TOX_DISTRO=fedora30          TOX_ANSIBLE=latest
     - TOX_DISTRO=fedora29          TOX_ANSIBLE=latest
     - TOX_DISTRO=fedora28          TOX_ANSIBLE=latest
@@ -82,6 +83,7 @@ env:
     - TOX_DISTRO=debian9           TOX_ANSIBLE={29,28}
     - TOX_DISTRO=debian8           TOX_ANSIBLE={29,28}
     - TOX_DISTRO=fedoralatest      TOX_ANSIBLE={29,28}
+    - TOX_DISTRO=fedora31          TOX_ANSIBLE={29,28}
     - TOX_DISTRO=fedora30          TOX_ANSIBLE={29,28}
     - TOX_DISTRO=fedora29          TOX_ANSIBLE={29,28}
     - TOX_DISTRO=fedora28          TOX_ANSIBLE={29,28}
